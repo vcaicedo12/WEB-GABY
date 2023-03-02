@@ -123,14 +123,24 @@ for (var i = 0; i < productos.length; i++) {
 		</SCript>
 	</div>
 	
-	<div class="contact-container">
-		<h2>Contacto</h2>
-		<div class="contact-icons">
-		  <a href="https://www.facebook.com/tu_pagina_de_facebook"><i class="fab fa-facebook"></i></a>
-		  <a href="https://www.instagram.com/tu_cuenta_de_instagram/"><i class="fab fa-instagram"></i></a>
-		  <a href="https://wa.me/593987976659"><i class="fab fa-whatsapp"></i></a>
-		</div> 
-	  </div>
+	<button onclick="mostrarContacto()" style="background-color: #f48fb1; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
+		CONTACTANOS
+		<div class="contact-container" style="display:none">
+			<h2>Contacto</h2>
+			<div class="contact-icons">
+			  <a href="https://www.facebook.com/tu_pagina_de_facebook"><i class="fab fa-facebook"></i></a>
+			  <a href="https://www.instagram.com/tu_cuenta_de_instagram/"><i class="fab fa-instagram"></i></a>
+			  <a href="https://wa.me/593987976659"><i class="fab fa-whatsapp"></i></a>
+			</div>
+		  </div>
+	  </button>
+<script>
+function mostrarContacto() {
+  var contacto = document.querySelector(".contact-container");
+  contacto.style.display = "block";
+}
+</script>
+
 	  
 </body>
 </html>
