@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>VALENTINAS SHOP - Ropa</title>
+	<title>Valentina's Fashion Frenzy - Ropa</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<script src="scripts.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-
 </head>
 <body>
-	<h1>VALENTINAS SHOP</h1>
+	<h1>VALENTINA'S FASHION FRENZY</h1>
+	<button onclick="toggleContacto()" style="background-color: #f48fb1; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
+		CONTACTANOS
+		<div class="contact-container" id="contacto" style="display:none">
+			<div class="contact-icons" style="line-height: 0">
+				<a href="https://www.facebook.com/tu_pagina_de_facebook"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.instagram.com/tu_cuenta_de_instagram/"><i class="fab fa-instagram"></i></a>
+				<a href="https://wa.me/593987976659"><i class="fab fa-whatsapp"></i></a>
+			</div>
+		</div>
+	</button>
 	<div class="container" id="productos-container">
-		<SCript>
+		<script>
 		// Creamos una matriz de objetos con la información de cada producto
 var productos = [
 { imagen: "imagenes/producto 1.jpg", nombre: "SHORT NEGRO", precio: "$20.00",tallas:[  "M",] },
@@ -75,7 +84,7 @@ var productos = [
 	{ imagen: "imagenes/producto 62.jpg", nombre: " SHORT DEPORTIVO", precio: "15.00" ,tallas:["6"]},
 	{ imagen: "imagenes/producto 63.jpg", nombre: "TERNO DE BANO  ", precio: "$20.00" ,tallas:["34B"]},
 	{ imagen: "imagenes/producto 64.jpg", nombre: "VESTIDO FLORES ", precio: "$30.00" ,tallas:["6"]},
-	{ imagen: "imagenes/producto 65.jpg", nombre: " VESTIDO NEGRO ", precio: "30.00" ,tallas:["12"]},
+	{ imagen: "imagenes/producto 65.jpg", nombre: " VESTIDO NEGRO ", precio: "$30.00" ,tallas:["12"]},
 ];
 
 // Seleccionamos el contenedor de productos en el HTML
@@ -122,24 +131,24 @@ for (var i = 0; i < productos.length; i++) {
 }
 		</SCript>
 	</div>
-	
-	<button onclick="mostrarContacto()" style="background-color: #f48fb1; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
-		CONTACTANOS<div class="contact-container" style="display:none">
-			<div class="contact-icons" style="line-height: 0">
-				<a href="https://www.facebook.com/tu_pagina_de_facebook"><i class="fab fa-facebook"></i></a>
-				<a href="https://www.instagram.com/tu_cuenta_de_instagram/"><i class="fab fa-instagram"></i></a>
-				<a href="https://wa.me/593987976659"><i class="fab fa-whatsapp"></i></a>
-			</div>
-		</div>
-	</button>
-	
 <script>
 function mostrarContacto() {
   var contacto = document.querySelector(".contact-container");
   contacto.style.display = "block";
 }
-</script>
+</script> 
 
-	  
+<script>
+
+function toggleContacto() {
+  var contacto = document.getElementById("contacto");
+  if (contacto.style.display === "none") {
+    contacto.style.display = "block";
+  } else {
+    contacto.style.display = "none";
+  }
+}
+
+</script>
 </body>
 </html>
