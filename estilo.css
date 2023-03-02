@@ -1,5 +1,5 @@
 
- body {
+body {
 	background-color: #FCEFF0;
 }
 
@@ -83,11 +83,59 @@ h1 {
 	font-size: 18px;
 	margin-bottom: 10px;
 }
-.contact-icons a[href*="wa.me"] i {
-	background-color: #4CAF50;
-  }
   .contact-icons a i {
 	font-size: 200%;
   }
+  .contact-button {
+    background-color: #f48fb1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    width: 100%; /* El botón ocupa todo el ancho disponible */
+    max-width: 300px; /* El ancho máximo del botón es de 300px */
+    margin: 0 auto; /* El botón se centra horizontalmente */
+}
+
+.contact-container {
+    display: none;
+    text-align: center;
+}
+
+.contact-icons {
+    line-height: 0;
+}
+
+.contact-button:hover .contact-container {
+    display: block;
+}
+
+button {
+	background-color: #f48fb1;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	position: relative;
+	top: 50px;
+	margin-bottom: 50px;
+}
+
+button:hover {
+	background-color: #ce93d8;
+	cursor: pointer;
+}
+
+
+  
+  
+
+
 
   
