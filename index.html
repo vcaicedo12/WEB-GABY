@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<script src="scripts.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	
+	
 </head>
 <body>
 	<h1>VALENTINA'S FASHION FRENZY</h1>
@@ -19,11 +22,16 @@
 			</div>
 		</div>
 	</button>
+	<button onclick="location.href='hombres.html'" style="background-color: #90caf9; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; margin-left: 20px;">
+		ROPA PARA HOMBRES
+</button>
+
+
 	<div class="container" id="productos-container">
 		<script>
 		// Creamos una matriz de objetos con la información de cada producto
 var productos = [
-{ imagen: "imagenes/producto 1.jpg", nombre: "SHORT NEGRO", precio: "$20.00",tallas:[  "M",] },
+{ imagen: "imagenes/producto 1.jpg", nombre: "SHORT NEGRO", precio: "$20.00",tallas:[  "M",]},
 { imagen: "imagenes/producto 2.jpg", nombre: "BLUSA AZUL", precio: "$10.00" ,tallas:["S","M"]},
 { imagen: "imagenes/producto 3.jpg", nombre: "BLUSA BLANCA", precio: "$7.00" ,tallas:["S"]},
 { imagen: "imagenes/producto 4.jpg", nombre: "BLUSA MEGRA ", precio: "$7.00" ,tallas:["S"]},
@@ -86,7 +94,6 @@ var productos = [
 	{ imagen: "imagenes/producto 64.jpg", nombre: "VESTIDO FLORES ", precio: "$30.00" ,tallas:["6"]},
 	{ imagen: "imagenes/producto 65.jpg", nombre: " VESTIDO NEGRO ", precio: "$30.00" ,tallas:["12"]},
 ];
-
 // Seleccionamos el contenedor de productos en el HTML
 var productosContainer = document.getElementById("productos-container");
 
@@ -150,5 +157,26 @@ function toggleContacto() {
 }
 
 </script>
+<a href="#" id="btn-to-top"><i class="fas fa-arrow-up"></i></a>
+<script>
+	// Mostrar el botón cuando el usuario ha desplazado hacia abajo
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btn-to-top").style.display = "block";
+  } else {
+    document.getElementById("btn-to-top").style.display = "none";
+  }
+}
+
+// Volver al inicio cuando se hace clic en el botón
+document.getElementById("btn-to-top").addEventListener("click", function(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+</script>
+
+
 </body>
 </html>
+
