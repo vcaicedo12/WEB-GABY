@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Valentina's Fashion Frenzy - Ropa</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="estilo_hombres.css">
+	<script src="scripts.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	
+	
+</head>
+<body>
+	<h1>VALENTINA'S FASHION FRENZY</h1>
+	<button onclick="toggleContacto()" style="background-color: #f48fb1; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold;">
+		CONTACTANOS
+		<div class="contact-container" id="contacto" style="display:none">
+			<div class="contact-icons" style="line-height: 0">
+				<a href="https://www.facebook.com/tu_pagina_de_facebook"><i class="fab fa-facebook"></i></a>
+				<a href="https://www.instagram.com/tu_cuenta_de_instagram/"><i class="fab fa-instagram"></i></a>
+				<a href="https://wa.me/593987976659"><i class="fab fa-whatsapp"></i></a>
+			</div>
+		</div>
+	</button>
+    <button style="background-color: #f48fb1; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; font-weight: bold; margin-right: 10px;">
+        <a href="index.html" style="text-decoration: none; color: #fff;">Volver a la página principal</a>
+    </button>
+
+	<div class="container" id="productos-container">
+		<script>
+		// Creamos una matriz de objetos con la información de cada producto
+var productos = [
+{ imagen: "imagenes/producto 1.jpg", nombre: "SHORT NEGRO", precio: "$20.00",tallas:[  "M",]},
+{ imagen: "imagenes/producto 2.jpg", nombre: "BLUSA AZUL", precio: "$10.00" ,tallas:["S","M"]},
+{ imagen: "imagenes/producto 3.jpg", nombre: "BLUSA BLANCA", precio: "$7.00" ,tallas:["S"]},
+{ imagen: "imagenes/producto 4.jpg", nombre: "BLUSA MEGRA ", precio: "$7.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 5.jpg", nombre: "BLUSA BICOLOR ", precio: "$15.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 6.jpg", nombre: "BLUSA BLANCA ", precio: "$15.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 7.jpg", nombre: "BLUSA BLANCA TIRA ", precio: "$15.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 8.jpg", nombre: "BLUSA CAFE ", precio: "$20.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 9.jpg", nombre: "CROP TOP LILA ", precio: "$17.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 10.jpg", nombre: "BLUSA ROSADA ", precio: "$15.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 11.jpg", nombre: "BLUSA BASICA ", precio: "$10.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 12.jpg", nombre: "BLUSA NEGRA ", precio: "$15.00" ,tallas:[,"M"]},
+	{ imagen: "imagenes/producto 13.jpg", nombre: "BLUSA NEGRA ", precio: "$10.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 14.jpg", nombre: "BLUSA TOMATE ", precio: "$20.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 16.jpg", nombre: "BLUSA TIRAS ", precio: "$15.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 17.jpg", nombre: "MALLA TOMATE ", precio: "$10.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 18.jpg", nombre: "BODY NEGRO ", precio: "$20.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 19.jpg", nombre: "BODY COLORES ", precio: "$10.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 20.jpg", nombre: "BODY BLANCO ", precio: "$20.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 22.jpg", nombre: "BODY NEGRO ", precio: "$15.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 23.jpg", nombre: "BUZO ESTAMPADO ", precio: "$20.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 24.jpg", nombre: "BUZO AZUL ", precio: "$15.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 25.jpg", nombre: "BUZO BARBIE ", precio: "$15.00" ,tallas:["S","L"]},
+	{ imagen: "imagenes/producto 27.jpg", nombre: "BUZO ESTAMPADO FLORES ", precio: "$15.00" ,tallas:["XS","S"]},
+	{ imagen: "imagenes/producto 28.jpg", nombre: "BUZO ESTAMPADO ", precio: "$15.00" ,tallas:["L"]},
+	{ imagen: "imagenes/producto 29.jpg", nombre: "CAMISETA BICOLOR ", precio: "$10.00" ,tallas:["S","L"]},
+	{ imagen: "imagenes/producto 30.jpg", nombre: "CROP TOP BLANCO", precio: "$8.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 31.jpg", nombre: "CROP TOP NEGRO ", precio: "$8.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 32.jpg", nombre: "BLUSA NEGRA ", precio: "$10.00" ,tallas:["XS","S"]},
+	{ imagen: "imagenes/producto 33.jpg", nombre: "CROP TOP ROSADA ", precio: "$8.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 34.jpg", nombre: "CAMISETA COLORES ", precio: "$10.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 35.jpg", nombre: "CROP NEGRA", precio: "$15.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 36.jpg", nombre: "CROP TOP ROSA ", precio: "$15.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 37.jpg", nombre: "CROP VERDE ", precio: "$15.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 38.jpg", nombre: "CROP TOP AMARILLO", precio: "$15.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 39.jpg", nombre: "CROP TOP BLANCO ", precio: "$15.00" ,tallas:["S"]},
+	{ imagen: "imagenes/producto 40.jpg", nombre: "CROP TOP MANGAS ", precio: "$22.00" ,tallas:["L"]},
+	{ imagen: "imagenes/producto 41.jpg", nombre: "CROP TOP AMARILLO", precio: "$15.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 42.jpg", nombre: "BLUSA PANUELO NEGRA ", precio: "$17.00" ,tallas:["XS"]},
+	{ imagen: "imagenes/producto 43.jpg", nombre: "ENTERIZO FALDA ", precio: "$18.00" ,tallas:["M"]},
+	{ imagen: "imagenes/producto 44.jpg", nombre: "MALLA AZUL", precio: "$8.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 45.jpg", nombre: "DIVIDI ", precio: "8.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 46.jpg", nombre: "FALDA CORTA ", precio: "$20.00" ,tallas:["10"]},
+	{ imagen: "imagenes/producto 47.jpg", nombre: "FALDA NEGRA TELA ", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 48.jpg", nombre: "FALDA JEANS  ", precio: "$18.00" ,tallas:["S","M"]},
+	{ imagen: "imagenes/producto 49.jpg", nombre: "FALDA JEANS CORTA", precio: "$18.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 50.jpg", nombre: "SHORT FALDA ", precio: "25.00" ,tallas:["6","10"]},
+	{ imagen: "imagenes/producto 51.jpg", nombre: "JEANS MONFIT  ", precio: "$30.00" ,tallas:["8"]},
+	{ imagen: "imagenes/producto 52.jpg", nombre: "JEANS ABERTURA", precio: "$30.00" ,tallas:["10"]},
+	{ imagen: "imagenes/producto 53.jpg", nombre: "JEANS CADENAS ", precio: "30.00" ,tallas:["8"]},
+	{ imagen: "imagenes/producto 54.jpg", nombre: "JEANS MONFIT ABERTURA ", precio: "$30.00" ,tallas:["6","8"]},
+	{ imagen: "imagenes/producto 55.jpg", nombre: "JEANS SKINNY", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 56.jpg", nombre: "JOGGER VINO ", precio: "20.00" ,tallas:["10"]},
+	{ imagen: "imagenes/producto 57.jpg", nombre: "JEANS MONFIT  ", precio: "$30.00" ,tallas:["10"]},
+	{ imagen: "imagenes/producto 58.jpg", nombre: "JEANS BASTA ANCHA", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 59.jpg", nombre: " JEANS CULOTTE", precio: "30.00" ,tallas:["6","8"]},
+	{ imagen: "imagenes/producto 60.jpg", nombre: "JEANS MONFIT  ", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 61.jpg", nombre: "JEANS BORDADO", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 62.jpg", nombre: " SHORT DEPORTIVO", precio: "15.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 63.jpg", nombre: "TERNO DE BANO  ", precio: "$20.00" ,tallas:["34B"]},
+	{ imagen: "imagenes/producto 64.jpg", nombre: "VESTIDO FLORES ", precio: "$30.00" ,tallas:["6"]},
+	{ imagen: "imagenes/producto 65.jpg", nombre: " VESTIDO NEGRO ", precio: "$30.00" ,tallas:["12"]},
+];
+// Seleccionamos el contenedor de productos en el HTML
+var productosContainer = document.getElementById("productos-container");
+
+// Iteramos sobre la matriz de objetos y generamos el HTML para cada producto
+for (var i = 0; i < productos.length; i++) {
+	// Creamos un nuevo elemento div para cada producto
+	var productoDiv = document.createElement("div");
+	productoDiv.className = "item";
+
+	// Creamos el elemento de imagen y establecemos la ruta de la imagen
+	var imagenElement = document.createElement("img");
+	imagenElement.src = productos[i].imagen;
+	imagenElement.alt = productos[i].nombre;
+	imagenElement.style.maxWidth = "100%";
+
+	// Creamos los elementos de título y precio y establecemos el texto correspondiente
+	var tituloElement = document.createElement("h2");
+	tituloElement.textContent = productos[i].nombre;
+
+	var precioElement = document.createElement("p");
+	precioElement.textContent = productos[i].precio;
+
+	// Creamos el elemento de tallas y agregamos opciones para las tallas disponibles
+	var tallasElement = document.createElement("select");
+	tallasElement.name = "talla";
+
+	for (var j = 0; j < productos[i].tallas.length; j++) {
+		var opcionElement = document.createElement("option");
+		opcionElement.value = productos[i].tallas[j];
+		opcionElement.textContent = productos[i].tallas[j];
+		tallasElement.appendChild(opcionElement);
+	}
+
+	// Agregamos los elementos creados al div de producto
+	productoDiv.appendChild(imagenElement);
+	productoDiv.appendChild(tituloElement);
+	productoDiv.appendChild(precioElement);
+	productoDiv.appendChild(tallasElement);
+
+	// Agregamos el div de producto al contenedor de productos en la página
+	productosContainer.appendChild(productoDiv);
+}
+		</SCript>
+	</div>
+<script>
+function mostrarContacto() {
+  var contacto = document.querySelector(".contact-container");
+  contacto.style.display = "block";
+}
+</script> 
+
+<script>
+
+function toggleContacto() {
+  var contacto = document.getElementById("contacto");
+  if (contacto.style.display === "none") {
+    contacto.style.display = "block";
+  } else {
+    contacto.style.display = "none";
+  }
+}
+
+</script>
+<a href="#" id="btn-to-top"><i class="fas fa-arrow-up"></i></a>
+<script>
+	// Mostrar el botón cuando el usuario ha desplazado hacia abajo
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("btn-to-top").style.display = "block";
+  } else {
+    document.getElementById("btn-to-top").style.display = "none";
+  }
+}
+
+// Volver al inicio cuando se hace clic en el botón
+document.getElementById("btn-to-top").addEventListener("click", function(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+</script>
+
+
+</body>
+</html>
