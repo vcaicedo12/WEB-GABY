@@ -131,11 +131,58 @@ button:hover {
 	background-color: #ce93d8;
 	cursor: pointer;
 }
+.filter-button {
+	background-color: #f48fb1;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	margin-right: 10px;
+}
 
+.filter-button:hover {
+	background-color: #ce93d8;
+	cursor: pointer;
+}
 
-  
-  
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 50px auto;
+	max-width: 1200px;
+}
 
+.item {
+	width: 300px;
+	margin: 20px;
+	padding: 10px;
+	background-color: #F5E1FF;
+	border: 2px solid #D3A3FF;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+	text-align: center;
+}
+#btn-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: #f48fb1;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+	z-index: 999;
+}
 
+#btn-to-top:hover {
+    background-color: #ff6b9b;
+}
 
-  
